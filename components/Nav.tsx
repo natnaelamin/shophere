@@ -9,7 +9,7 @@ import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/ne
 
 const Nav = () => {
   return (
-    <div className='bg-black px-10 '>
+    <div className='bg-slate-900 px-5 pt-2'>
       <div className='flex items-center justify-between py-1'>
         <Link href="/">
         <Image src="/images/mainlogo.jpg" className='rounded-full'
@@ -30,8 +30,6 @@ const Nav = () => {
               <UserIcon  cursor={"pointer"} size={26} className='text-white'/>
               </SignInButton>
             </SignedOut>
-            
-
         </div>
       </div>
     </div>
