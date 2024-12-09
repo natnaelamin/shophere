@@ -10,7 +10,7 @@ import ProductCard from "./ProductCard";
     title: string;
     price: number;
     description: string;
-    catagory: string;
+    category: string;
     image: string;
     rating:{
         count: number;
@@ -47,7 +47,7 @@ const AllProduct = () => {
                 </div>
             ):
             (
-                <div className="w-4/5 mx-auto mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="w-4/5 mx-auto mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
                     {products?.map((product) =>(
                         <ProductCard product={product}/>
                     ))}
