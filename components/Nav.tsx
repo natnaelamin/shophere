@@ -9,7 +9,7 @@ import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/ne
 
 const Nav = () => {
   return (
-    <div className='bg-slate-900 px-5 py-2 border-b-2 border-gray-400'>
+    <div className='bg-slate-900 px-5 py-2 border-b border-slate-300'>
       <div className='flex items-center justify-between py-1'>
         <Link href="/">
         <Image src="/images/mainlogo.jpg" className='rounded-full mt-1'

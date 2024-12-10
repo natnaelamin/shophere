@@ -52,10 +52,10 @@ const ProductCard = ({ product }: { product: productProps }) => {
           <p className='text-white text-lg font-bold opacity-80'>${product.price}</p>
         </div>
         <div className='flex items-center space-x-2 mt-2'>
-          <Button size={"icon"} className='border'>
+          <Button size={"icon"} className='border rounded'>
             <ShoppingBag size={18}/>
           </Button>
-          <Button size={"icon"} className='bg-red-500'>
+          <Button size={"icon"} className='bg-red-500 rounded overflow-hidden'>
             <Heart size={18}/>
           </Button>
         </div>

@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+    .footer_title {
+        @apply text-xl text-white mb-6
+    }
+
+    .footer_link {
+        @apply text-white text-sm w-fit cursor-pointer hover:text-orange-500 mb-4
+    }
+}
