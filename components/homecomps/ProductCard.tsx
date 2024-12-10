@@ -23,7 +23,7 @@ const ProductCard = ({ product }: { product: productProps }) => {
   
   return (
     <div className='p-5'>
-        <div className='w-[200px] h-[150px]'>
+        <div className='w-[200px] h-[150px] flex items-start justify-start'>
           <Image 
           src={product.image}
           alt={product.title}

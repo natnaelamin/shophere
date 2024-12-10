@@ -43,7 +43,7 @@ const AllProduct = () => {
             <h1 className="text-center font-bold text-2xl text-white">All Products</h1>
             {loading? (
                 <div className="flex items-center justify-center mt-14">
-                    <Loader size={32} className="animation-spin"/>
+                    <Loader size={40} className="animation-spin text-white"/>
                 </div>
             ):
             (
