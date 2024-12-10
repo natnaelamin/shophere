@@ -1,4 +1,5 @@
 import { getProductByCategory, getSingleProduct } from '@/request/request';
+import { StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react'
 
@@ -31,6 +32,25 @@ const ProductDetails = async ({params}:{params: {id: string}}) => {
             alt={singleProduct.title}
             width={400} height={400}/>
         
+        </div>
+        <div className='col-span-4'>
+            <h1 className='text-white font-bold text-2xl lg:text-3xl'>{singleProduct.title}</h1>
+            <div className='flex items-center mt-2 space-x-2'>
+                <div className='flex items-center'>
+                    {ratingArray.map((star)=>(
+                        <StarIcon key={Math.random()*500} 
+                        size={20} fill='yellow' 
+                        className='text-yellow-600'/> 
+                    ))}
+                </div>
+                <p className='text-base font-semibold text-slate-500'>
+                    ({singleProduct?.rating.count} Reviews)
+                </p>
+            </div>
+            <h1 className='text-3xl lg:text-6xl md:text-4xl text-gray-500 font-bold'>
+                ${singleProduct?.price.toFixed(2)}
+            </h1>
+            <p className='mt-4 text-base text-white'>{singleProduct?.description}</p>
         </div>
       </div>
     </div>
