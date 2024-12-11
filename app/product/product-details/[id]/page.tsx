@@ -2,6 +2,8 @@ import { getProductByCategory, getSingleProduct } from '@/request/request';
 import { StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react'
+import AddToCart from './AddToCart';
+import ProductCard from '@/components/homecomps/ProductCard';
 
 interface productProps {
     id: number;
@@ -50,7 +52,25 @@ const ProductDetails = async ({params}:{params: {id: string}}) => {
             <h1 className='text-3xl lg:text-6xl md:text-4xl text-gray-500 font-bold'>
                 ${singleProduct?.price.toFixed(2)}
             </h1>
-            <p className='mt-4 text-base text-white'>{singleProduct?.description}</p>
+            <p className='mt-4 text-base text-slate-300'>{singleProduct?.description}</p>
+            <p className='mt-4 text-sm text-white font-semibold'>
+                Category: {singleProduct.category}
+            </p>
+            <p className='mt-2 text-white text-sm font-semibold'>
+                Tag: Shophere
+            </p>
+            <p className='mt-2 text-white text-sm font-semibold'>
+                SKU: {Math.random() * 5000}
+            </p>
+            <AddToCart />
+        </div>
+      </div>
+      <div className='w-4/5 mt-16 mx-auto'>
+        <h1 className='text-2xl font-semibold text-white'>Related Products</h1>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-16 gap-12'>
+            {relatedProducts.map((product)=>(
+                <ProductCard key={product.id} product={product}/>
+            ))}
         </div>
       </div>
     </div>
