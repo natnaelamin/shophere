@@ -32,7 +32,7 @@ const ProductDetails = async ({params}:{params: {id: string}}) => {
             <Image 
             src={singleProduct.image}
             alt={singleProduct.title}
-            width={400} height={400}/>
+            width={400} height={300}/>
         
         </div>
         <div className='col-span-4'>
