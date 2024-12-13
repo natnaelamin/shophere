@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { Button } from '../ui/button';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from '@/store/cartSlice';
+import { RootState } from '@/store/store';
 
 interface productProps {
     id: number;
@@ -20,6 +23,14 @@ interface productProps {
 const ProductCard = ({ product }: { product: productProps }) => {
   const num = Math.round(product.rating.rate);
   const ratingArray = new Array(num).fill(0);
+
+  const items = useSelector((state:RootState) => state.cart.items);
+
+  const dispatch = useDispatch();
+  
+  const addToCartHandler = (product: productProps) =>{
+    dispatch(addItem(product));
+  }
   
   return (
     <div className='p-5'>
@@ -52,7 +63,8 @@ const ProductCard = ({ product }: { product: productProps }) => {
           <p className='text-white text-lg font-bold opacity-80'>${product.price}</p>
         </div>
         <div className='flex items-center space-x-2 mt-2'>
-          <Button size={"icon"} className='border rounded'>
+          <Button size={"icon"} className='border rounded'
+          onClick={() => {addToCartHandler(product)}}>
             <ShoppingBag size={18}/>
           </Button>
           <Button size={"icon"} className='bg-red-500 rounded overflow-hidden'>
