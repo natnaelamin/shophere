@@ -1,3 +1,4 @@
+
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 
 export interface CartItem {
@@ -30,7 +31,7 @@ const cartSlice = createSlice({
                 (item) => item.id === action.payload.id
             );
             if(existingItem){
-                existingItem.quantity =+ 1;
+                existingItem.quantity += 1;
             } else{
                 state.items.push({...action.payload, quantity: 1});
             }
@@ -42,7 +43,7 @@ const cartSlice = createSlice({
             );
             if(existingItem){
                 if(existingItem.quantity > 1){
-                    existingItem.quantity =- 1;
+                    existingItem.quantity -= 1;
                 } else{
                     state.items = state.items.filter(
                         (item) => item.id != action.payload.id

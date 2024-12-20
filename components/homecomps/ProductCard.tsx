@@ -1,3 +1,4 @@
+
 import { Heart, icons, ShoppingBag, StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +24,6 @@ interface productProps {
 const ProductCard = ({ product }: { product: productProps }) => {
   const num = Math.round(product.rating.rate);
   const ratingArray = new Array(num).fill(0);
-
-  const items = useSelector((state:RootState) => state.cart.items);
 
   const dispatch = useDispatch();
   

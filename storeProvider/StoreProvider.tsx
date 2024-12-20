@@ -1,4 +1,4 @@
-"client component"
+"use client"
 
 import store from '@/store/store'
 import React, { ReactNode } from 'react'
