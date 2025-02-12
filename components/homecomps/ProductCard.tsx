@@ -1,4 +1,4 @@
-
+"use client"
 import { Heart, icons, ShoppingBag, StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,8 +25,7 @@ interface productProps {
 const ProductCard = ({ product }: { product: productProps }) => {
   const num = Math.round(product.rating.rate);
   const ratingArray = new Array(num).fill(0);
-  const {toast} = useToast();
-
+  const { toast } = useToast();
   const dispatch = useDispatch();
   
   const addToCartHandler = (product: productProps) =>{
