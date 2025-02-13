@@ -4,15 +4,14 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='pt-20 pb-12 bg-slate-900'>
-      <div className='w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto pb-8 border-b border-slate-300'>
+      <div className='w-4/5 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto pb-8 border-b border-slate-300'>
         <div>
             <h1 className='text-white mb-4 font-semibold text-xl'>
                 Shophere
             </h1>
             <p className='text-sm text-slate-400'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                 Eum explicabo dolores minima, tempore dolor eaque voluptatem nostrum
-                  sed molestiae veritatis atque, amet cumque magnam vel soluta quos, eos aspernatur incidunt.
+            ShopHere Your go-to destination for seamless online shopping. Explore a wide range of products,
+            enjoy fast and secure checkout, and experience a hassle-free shopping journey.
             </p>
             <p className='text-base mt-6 text-slate-400'>
                 +251912345678
