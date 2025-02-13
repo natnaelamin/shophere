@@ -1,12 +1,11 @@
 "use client"
-import { Heart, icons, ShoppingBag, StarIcon } from 'lucide-react';
+import { Heart, ShoppingBag, StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { Button } from '../ui/button';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
-import { RootState } from '@/store/store';
 import { useToast } from '@/hooks/use-toast';
 
 interface productProps {
@@ -51,9 +50,9 @@ const ProductCard = ({ product }: { product: productProps }) => {
           sm:truncate mt-2 font-semibold text-white'>{product.title}</h1>
         </Link>
         <div className='flex items-center'>
-          {ratingArray.map((star) => (
+          {ratingArray.map((_, index) => (
           <StarIcon
-          key={Math.random() * 1000}
+          key={index}
           size={16}
           fill='yellow'
           className='text-yellow-500'/>

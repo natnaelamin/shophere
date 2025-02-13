@@ -32,7 +32,7 @@ const RemoveItemHandler = (id: number)=>{
   dispatch(removeItem({id}))
 }
 
-const handleSuccess = (details: any ) =>{
+const handleSuccess = () =>{
   router.push("/success")
   dispatch(clearCart())
 }

@@ -5,7 +5,7 @@ import React from 'react'
 import SearchBox from './navcomps/SearchBox'
 import { HeartIcon, UserIcon } from 'lucide-react'
 import ShoppingCart from './navcomps/ShoppingCart'
-import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
 const Nav = () => {
   return (

@@ -49,7 +49,7 @@ const AllProduct = () => {
             (
                 <div className="w-4/5 mx-auto mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
                     {products?.map((product) =>(
-                        <ProductCard product={product}/>
+                        <ProductCard key={product.id} product={product}/>
                     ))}
                 </div>
             )
