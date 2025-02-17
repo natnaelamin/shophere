@@ -31,7 +31,7 @@ const Catagory = ({ HandleCategory }: CategoryProps) => {
                         hover:scale-110 transition-all bg-gradient-to-r from-violet-900 hover:from-violet-500
                         to-pink-700 hover:to-pink-500 "
                   >
-                      <h1 className="text-white text-lg">Products</h1>
+                      <h1 className="text-white text-lg">all products</h1>
                   </button>
                 {categories.map((category) => (
                     <button

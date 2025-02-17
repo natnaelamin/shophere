@@ -43,7 +43,7 @@ const AllProduct = ({productCategory}: { productCategory: string | undefined }) 
 
     return (
         <div className="py-14">
-            <h1 className="text-center font-bold text-2xl text-white">All Products</h1>
+            <h1 className="text-center font-bold text-2xl text-white">Our Products</h1>
             {loading? (
                 <div className="flex items-center justify-center mt-14">
                     <Loader size={40} className="animation-spin text-white"/>
