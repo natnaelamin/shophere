@@ -1,7 +1,7 @@
 "use client"
 
 import AllProduct from "@/components/homecomps/AllProduct";
-import Catagory from "@/components/homecomps/Catagory";
+import Category from "@/components/homecomps/Category";
 import HeroSection from "@/components/homecomps/HeroSection";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="bg-slate-900 ">
       <HeroSection />
-      <Catagory HandleCategory={HandleCategory}/>
+      <Category HandleCategory={HandleCategory}/>
       <AllProduct productCategory={productCategory}/>
     </div>
   );

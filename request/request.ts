@@ -1,9 +1,9 @@
 
- export async function getAllCatagory(){
-    const catagoryRes= await fetch(
+ export async function getAllCategory(){
+    const categoryRes= await fetch(
         "https://fakestoreapi.com/products/categories"
     );
-    return catagoryRes.json();
+    return categoryRes.json();
 }
 
 export async function getAllProduct(){

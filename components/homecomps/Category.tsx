@@ -1,18 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getAllCatagory } from "@/request/request";
+import { getAllCategory } from "@/request/request";
 
 interface CategoryProps {
     HandleCategory: (category: string) => void;
 }
 
-const Catagory = ({ HandleCategory }: CategoryProps) => {
+const Category = ({ HandleCategory }: CategoryProps) => {
     const [categories, setCategories] = useState<string[]>([]);
 
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const data = await getAllCatagory();
+                const data = await getAllCategory();
                 setCategories(data);
             } catch (error) {
                 console.log(error);
@@ -49,4 +49,4 @@ const Catagory = ({ HandleCategory }: CategoryProps) => {
     );
 };
 
-export default Catagory;
+export default Category;
