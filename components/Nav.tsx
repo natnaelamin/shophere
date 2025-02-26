@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import SearchBox from './navcomps/SearchBox'
-import { HeartIcon, UserIcon } from 'lucide-react'
+import { UserIcon } from 'lucide-react'
 import ShoppingCart from './navcomps/ShoppingCart'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
@@ -20,7 +20,6 @@ const Nav = () => {
         </Link>
         <div className='flex items-center justify-between space-x-5 pt-1'>
             <SearchBox />
-            <HeartIcon  cursor={"pointer"} className='text-white'/>
             <ShoppingCart />
             <SignedIn>
               <UserButton/>

@@ -1,5 +1,5 @@
 "use client"
-import { Heart, ShoppingBag, StarIcon } from 'lucide-react';
+import { ShoppingBag, StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -66,12 +66,9 @@ const ProductCard = ({ product }: { product: productProps }) => {
           <p className='text-white text-lg font-bold opacity-80'>${product.price}</p>
         </div>
         <div className='flex items-center space-x-2 mt-2'>
-          <Button size={"icon"} className='border rounded'
+          <Button size={"icon"} className='border rounded w-32 px-0 hover:bg-blue-700'
           onClick={() => {addToCartHandler(product)}}>
-            <ShoppingBag size={18}/>
-          </Button>
-          <Button size={"icon"} className='bg-red-500 rounded overflow-hidden'>
-            <Heart size={18}/>
+            <ShoppingBag size={18}/> <span>Add to Cart</span>
           </Button>
         </div>
     </div>
