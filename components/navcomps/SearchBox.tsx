@@ -20,17 +20,19 @@ const handleSearch= (e: React.FormEvent)=>{
     <div> 
         <Dialog >
             <DialogTrigger className='flex items-center '><Search className='text-white'/></DialogTrigger>
-            <DialogContent className=' bg-slate-400 border-none'>
+            <DialogContent className=' bg-slate-400 border-none '>
                 <DialogHeader className='px-5' >
                 <form onSubmit={handleSearch}>
                     <input type="text" value={searchTerm} placeholder='search for product...'
                     onChange={(e)=>setSearchTerm(e.target.value)} 
                     className='text-black w-full h-8 outline-none mt-4 px-2'/>
-                    <DialogClose>
-                      <button type="submit" className="mt-2 w-full bg-blue-600 text-white py-1 rounded">
-                          Search
-                      </button>
-                    </DialogClose>
+                    <div className='flex justify-center items-center'>
+                      <DialogClose>
+                        <button type="submit" className="mt-2 w-full bg-blue-600 text-white py-1 px-1 rounded">
+                            Search
+                        </button>
+                      </DialogClose>
+                    </div>
                 </form>
                 </DialogHeader>
             </DialogContent>
